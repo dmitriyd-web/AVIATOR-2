@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style-type: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: url(../images/cursor.png), pointer;
+}
+
+:root {
+    --white-color: #ffffff;
+    --red-color: #E10838;
+}
+
+ul[class], ol[class] {
+    padding: 0;
+    list-style-type: none;
+}
+  
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scrollbar-color: var(--red-color) var(--white-color);
+    scrollbar-width: thin;
+}
+    *::-webkit-scrollbar {
+    cursor: pointer;
+    width: 6px;
+    background: transparent;
+    border-radius: 3px;
+}
+    *::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: var(--primary-color);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    border-radius: 3px;
+}
+*::before, *::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: var(--red-color) var(--white-color);
+    scrollbar-width: thin;
+}
+    *::before::-webkit-scrollbar, *::after::-webkit-scrollbar {
+    cursor: pointer;
+    width: 6px;
+    background: var(--bg-color);
+    border-radius: 3px;
+}
+    *::before::-webkit-scrollbar-thumb, *::after::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: transparent;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    border-radius: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html,
+body {
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    color: var(--white-color);
+    line-height: 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    background: url(../images/bg.png);
+    background-size: cover;
+    background-position: center;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden-x;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    max-width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: var(--white-color);
+    background: linear-gradient(84.35deg, #FF0E46 11.46%, #E30036 31.95%, #FD264E 55.35%, #FF345D 76.53%, #FD0A46 97.17%);
+    border: 2px solid #FF5471;
+    box-shadow: 0px 0px 16px 0px #F0043E;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.container {
+	width: calc(100% - 30px);
+	max-width: 1320px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+    position: relative;
+	margin: 0 -15px;
+}
+
+.coin1 {
+    position: absolute;
+    width: 131px;
+    top: 238px;
+    right: 13%;
+}
+
+.coin2 {
+    position: absolute;
+    top: 200px;
+    left: -152px;
+}
+
+.coin3 {
+    position: absolute;
+    right: 27%;
+    bottom: 33px;
+    width: 113px;
+}
+
+.coin4 {
+    position: absolute;
+    left: 26%;
+    bottom: 118px;
+}
+
+header {
+    padding: 60px 0;
+    text-align: center;
+}
+
+header img {
+    width: 130px;
+}
+
+main {
+    padding: 45px 0 275px;
+}
+
+main .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.video {
+    position: relative;
+    width: 228px;
+    height: 480px;
+    background-image: url(../images/phone.png);
+    background-size: cover;
+    margin: 0 30px;
+}
+
+#video {
+    position: relative;
+    display: block;
+    width: 220px;
+    margin: 40px auto 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.progress {
+    position: absolute;
+    left: 4px;
+    bottom: 46px;
+    width: 220px;
+    height: 10px;
+    background-color: #000;
+    z-index: 4;
+}
+
+.video-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #FF5471;
+    width: 0;
+    height: 10px;
+    transition: 10s;
+}
+
+.progress-start {
+    animation-name: videoProgress;
+    animation-duration: 114s;
+    animation-timing-function: ease-out;  
+}
+
+.progress-paused {
+    animation-play-state: paused;
+}
+
+.guide {
+    width: 304px;
+    margin: auto 30px;
+}
+
+.guide p {
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px;
+}
+
+.guide p span.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 12px 0 0;
+    border: 1px solid #E10838;
+    border-radius: 50%;
+}
+
+.guide p span.text {
+    width: calc(100% - 44px);
+}
+
+.guide .btn {
+    margin: 36px 0 0;
+}
+
+@keyframes videoProgress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .row {
+        flex-direction: column;
+    }
+    .video {
+        margin: 0 auto;
+    }
+    .guide {
+        width: 100%;
+        max-width: 500px;
+        margin: 50px auto 0;
+    }
+    .guide .btn {
+        margin: 36px auto 0;
+    }
+}
